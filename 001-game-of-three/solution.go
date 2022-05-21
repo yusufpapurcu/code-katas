@@ -2,6 +2,10 @@ package game_of_three
 
 func Solution(num int) []int {
 	var res = []int{}
+	isNumNegative := num < 0
+	if isNumNegative {
+		num = 0 - num
+	}
 	for {
 		res = append(res, num)
 		if num == 1 {
@@ -18,5 +22,10 @@ func Solution(num int) []int {
 		}
 	}
 
+	if isNumNegative {
+		for i := range res {
+			res[i] *= -1
+		}
+	}
 	return res
 }

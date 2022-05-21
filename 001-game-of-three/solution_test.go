@@ -15,6 +15,7 @@ func TestSolution(t *testing.T) {
 	}{
 		{3, []int{3, 1}},
 		{100, []int{100, 99, 33, 11, 12, 4, 3, 1}},
+		{-100, []int{-100, -99, -33, -11, -12, -4, -3, -1}},
 	}
 
 	for _, tcase := range cases {
